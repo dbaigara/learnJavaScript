@@ -7,12 +7,24 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="index.js"></script>
+    <div id="drawing" style="width:800px; height:600px"></div>
+   
+    <!-- <script src="index.js"></script> -->
+    <script type='module'>
+        import { openFile, draw } from 'https://root.cern/js/latest/modules/main.mjs';
+        let filename = "https://root.cern/js/files/hsimple.root";
+        let file = await openFile(filename);
+        let obj = await file.readObject("hpxpy;1");
+        await draw("drawing", obj, "colz");
+     </script>
 
 <div>
-    <p>
+<p>You are here</p>
+        <!-- <iframe width="700px" height="400px"
+        src="https://root.cern/js/latest/?nobrowser&file=https://root.cern/js/files/hsimple.root&item=hpxpy&opt=colz">
+        </iframe> -->
         <li>First item</li>
-    </p>
+
 </div>
 <div>
     <p>

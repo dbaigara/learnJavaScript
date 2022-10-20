@@ -2,4 +2,4 @@ function hello(){
     alert("Я JavaScript!")
 }
 
-hello();
+//hello();
