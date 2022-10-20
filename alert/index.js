@@ -1,1 +1,5 @@
-alert("Я JavaScript!")
+function hello(){
+    alert("Я JavaScript!")
+}
+
+hello();
